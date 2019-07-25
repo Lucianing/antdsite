@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import Media from 'react-media';
-import '../static/style';
+import '../assets/style';
 import Header from './Header';
 import Footer from './Footer';
 import { PageContext } from './PageContext';
@@ -82,7 +82,7 @@ export class Layout extends React.Component<LayoutProps, LayoutState> {
 
   renderPanel = (props: any) => {
     const mergeProps = { ...props, id: 'layout-panel' };
-    return <div {...mergeProps}></div>;
+    return <div {...mergeProps} />;
   };
 }
 
