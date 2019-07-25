@@ -1,11 +1,6 @@
 {
   "name": "docs",
-  "version": "1.0.0",
-  "description": "",
-  "main": ".antdsite.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "private": true,
   "scripts": {
     "build": "npm run clean && gatsby build",
     "start": "npm run clean && gatsby develop",
