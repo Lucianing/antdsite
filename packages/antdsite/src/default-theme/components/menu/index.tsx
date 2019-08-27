@@ -1,8 +1,9 @@
 import React from 'react';
 import { PageInfo } from '../utils';
 import MobileMenu from 'rc-drawer';
-import { Badge, Col, Menu, Icon, Affix } from 'antd';
+import { Badge, Col, Menu, Icon, Affix, Divider } from 'antd';
 import Link from '../MyLink';
+import Toc from '../Toc';
 
 const { SubMenu } = Menu;
 
@@ -202,6 +203,8 @@ export default class LeftMenu extends React.PureComponent<MenuPros, MenuState> {
     return isMobile ? (
       <MobileMenu key="mobile-menu" wrapperClassName="drawer-wrapper">
         {menuChild}
+        <Divider />
+        <Toc />
       </MobileMenu>
     ) : (
       <Col xxl={4} xl={5} lg={6} md={24} sm={24} xs={24} className="main-menu">

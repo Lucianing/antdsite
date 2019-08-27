@@ -79,7 +79,7 @@ export default class MainContent extends React.PureComponent<MainContentProps, M
               <HomePage />
             ) : (
               <div>
-                <Content prev={prev} next={next} />
+                <Content isMoblie={isMobile} prev={prev} next={next} />
               </div>
             )}
           </div>

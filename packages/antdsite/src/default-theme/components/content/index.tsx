@@ -1,31 +1,20 @@
 import React from 'react';
-import { Anchor } from 'antd';
 import EditButton from './EditButton';
-import { OneToc } from '../../../templates';
 import moment from 'moment';
 import AvatarList from './AvatarList';
 import { PageContext } from 'antdsite';
 import SEO from '../SEO/SEO';
 import { getPageTitle } from '../utils';
 import PrevAndNext from '../prevAndNext';
-
-const Link = Anchor.Link;
+import Toc from '../Toc';
 
 export default class Article extends React.PureComponent<{
   prev: React.Component | null;
   next: React.Component | null;
+  isMoblie: boolean;
 }> {
   static contextType = PageContext;
-
   node: HTMLElement | null | undefined;
-
-  getTocs = (toc: OneToc): any => {
-    return (
-      <Link key={toc.url} href={toc.url} title={toc.title}>
-        {toc.items && toc.items.map(this.getTocs)}
-      </Link>
-    );
-  };
 
   getPageTitle = (currentPageTitle: string, webAppName: string) => {
     return currentPageTitle ? `${currentPageTitle} | ${webAppName}` : webAppName;
@@ -60,7 +49,7 @@ export default class Article extends React.PureComponent<{
 
     const currentPageTitle = getPageTitle(currentPageInfo);
 
-    const { prev, next } = this.props;
+    const { prev, next, isMoblie } = this.props;
     return (
       <>
         <SEO
@@ -92,14 +81,7 @@ export default class Article extends React.PureComponent<{
               </div>
             )}
 
-            {currentPageInfo.tableOfContents.items &&
-            currentPageInfo.tableOfContents.items.length ? (
-              <div className="toc-affix">
-                <Anchor offsetTop={70} className="toc" targetOffset={0}>
-                  {currentPageInfo.tableOfContents.items.map(this.getTocs)}
-                </Anchor>
-              </div>
-            ) : null}
+            {!isMoblie ? <Toc affix /> : null}
             <section className="markdown api-container">
               {React.createElement(currentPageContent)}
             </section>
