@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.9](https://github.com/YvesCoding/antdsite/compare/antdsite@0.12.8...antdsite@0.12.9) (2019-08-28)
+
+**Note:** Version bump only for package antdsite
+
+
+
+
+
 ## [0.12.8](https://github.com/YvesCoding/antdsite/compare/antdsite@0.12.7...antdsite@0.12.8) (2019-08-27)
 
 **Note:** Version bump only for package antdsite

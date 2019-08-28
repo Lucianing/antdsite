@@ -1,6 +1,6 @@
 {
   "name": "antdsite",
-  "version": "0.12.8",
+  "version": "0.12.9",
   "description": "A static website generator build with Ant Design and driven by gatsby.js",
   "homepage": "https://github.com/YvesCoding/antdsite",
   "repository": {
